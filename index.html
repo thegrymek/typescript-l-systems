@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <title>L-Systems</title>
+</head>
+<body>
+<canvas id="turtle-board" style="position:absolute; width:100%; height:100%; z-index: -1;"></canvas>
+<h4></h4>
+<div class="container col-xs-4">
+    <!--
+        dynamically generated menu!
+    -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            L-Systems<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="options-dropdown-menu">
+        </ul>
+        
+    </div>
+
+    <button id="options-draw" type="button" class="btn btn-primary">Draw</button>
+    <button id="options-clear" type="button" class="btn btn-primary">Clear</button>
+
+    <h4></h4>
+    
+    <div class="panel panel-primary">
+        <div class="panel-heading" id="options-heading"></div>
+        <div class="panel-body">
+            <div id="options">
+                <div class="input-group">
+                    <span class="input-group-addon">Length</span>
+                    <input id="options-size" type="text" class="form-control" placeholder="number between 1 and 8, default 2">
+                    
+                    <span class="input-group-addon">Angle</span>
+                    <input id="options-angle" type="text" class="form-control" placeholder="number between 0 and 360, default 90">
+                </div>
+                <h4></h4>
+                <div class="input-group">
+                    <span class="input-group-addon">Max Iterations</span>
+                    <input id="options-max-iterations" type="text" class="form-control" placeholder="number between  1 and 8, default 5">
+                    
+                    <span class="input-group-addon">Color</span>
+                    <input id="options-color" type="text" class="form-control" placeholder="red, green, blue..., default 'black'">
+                </div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon">Axiom</span>
+            <input id="options-main-axiom" type="text" class="form-control">
+        </div>
+
+        <table class="table">
+            <thead>
+                <th class="col-xs-1"></th>
+                <th class="col-xs-1">Rule</th>
+                <th ></th>
+            </thead>
+            <tbody id="options-rule-body">
+                <tr>
+                    <td><button id="options-rule-button-add" type="button" class="btn btn-success">+</button></td>
+                    <td><input id="options-rule-add-letter" type="text" class="form-control"/></td>
+                    <td><input id="options-rule-add-rule" type="text" class="form-control"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container col-xs-8" >
+    <img id="turtle"/>
+</div>
+
+    <script src="dist/jquery-2.2.4.min.js"></script>
+    <script src="dist/jquery-turtle/jquery.turtle.min.js"></script>
+    <script src="dist/bootstrap.min.js"></script>
+    <script src="build/LSystem.js"></script>
+    <script src="build/main.js"></script>
+</body>
+</html>
