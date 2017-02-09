@@ -2,6 +2,7 @@
 
 Generate L-Systems in your browser!
 
+![alt tag](https://raw.githubusercontent.com/thegrymek/typescript-l-systems/master/l-systems.png)
 
 <dl>
   <dt>Commands</dt>
