@@ -30,5 +30,5 @@ npm install -g typescript tsd
 
 To compile
 ```bash
-tsc .
+tsc
 ```
